@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\1\\Desktop\\Projects\\Movadian\\Movadian\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1FD6D1F0-71B2-4EE3-9537-901CA2F67854}|Movadian\\Movadian.csproj|C:\\Users\\1\\Desktop\\Projects\\Movadian\\Movadian\\movadian\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1FD6D1F0-71B2-4EE3-9537-901CA2F67854}|Movadian\\Movadian.csproj|solutionrelative:movadian\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1FD6D1F0-71B2-4EE3-9537-901CA2F67854}|Movadian\\Movadian.csproj|c:\\users\\1\\desktop\\projects\\movadian\\movadian\\movadian\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FD6D1F0-71B2-4EE3-9537-901CA2F67854}|Movadian\\Movadian.csproj|solutionrelative:movadian\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1FD6D1F0-71B2-4EE3-9537-901CA2F67854}|Movadian\\Movadian.csproj|c:\\users\\1\\desktop\\projects\\movadian\\movadian\\movadian\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{1FD6D1F0-71B2-4EE3-9537-901CA2F67854}|Movadian\\Movadian.csproj|C:\\Users\\1\\Desktop\\Projects\\Movadian\\Movadian\\movadian\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{1FD6D1F0-71B2-4EE3-9537-901CA2F67854}|Movadian\\Movadian.csproj|solutionrelative:movadian\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FD6D1F0-71B2-4EE3-9537-901CA2F67854}|Movadian\\Movadian.csproj|c:\\users\\1\\desktop\\projects\\movadian\\movadian\\movadian\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FD6D1F0-71B2-4EE3-9537-901CA2F67854}|Movadian\\Movadian.csproj|solutionrelative:movadian\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1FD6D1F0-71B2-4EE3-9537-901CA2F67854}|Movadian\\Movadian.csproj|C:\\Users\\1\\Desktop\\Projects\\Movadian\\Movadian\\movadian\\taxapimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -31,6 +35,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "MainForm.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\1\\Desktop\\Projects\\Movadian\\Movadian\\Movadian\\MainForm.Designer.cs",
+              "RelativeDocumentMoniker": "Movadian\\MainForm.Designer.cs",
+              "ToolTip": "C:\\Users\\1\\Desktop\\Projects\\Movadian\\Movadian\\Movadian\\MainForm.Designer.cs",
+              "RelativeToolTip": "Movadian\\MainForm.Designer.cs",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAowGwAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-18T06:26:44.067Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "MainForm.cs",
               "DocumentMoniker": "C:\\Users\\1\\Desktop\\Projects\\Movadian\\Movadian\\Movadian\\MainForm.cs",
               "RelativeDocumentMoniker": "Movadian\\MainForm.cs",
@@ -55,7 +72,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "TaxApiManager.cs",
               "DocumentMoniker": "C:\\Users\\1\\Desktop\\Projects\\Movadian\\Movadian\\Movadian\\TaxApiManager.cs",
               "RelativeDocumentMoniker": "Movadian\\TaxApiManager.cs",
