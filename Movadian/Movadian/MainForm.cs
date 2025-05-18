@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TaxCollectData.Library.Dto;
@@ -11,9 +12,34 @@ namespace Movadian
         public MainForm()
         {
             InitializeComponent();
+            var settings = SettingsManager.Load();
+            txtMemoryId.Text = settings.MemoryId;
+            txtCertPath.Text = settings.CertificatePath;
+            txtKeyPath.Text = settings.PrivateKeyPath;
+
             apiManager = new TaxApiManager();
         }
         private TaxApiManager apiManager;
+
+        private void btnBrowseCert_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dlg = new OpenFileDialog();
+            dlg.Filter = "Certificate Files (*.cer;*.crt)|*.cer;*.crt|All files (*.*)|*.*";
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                txtCertPath.Text = dlg.FileName;
+            }
+        }
+
+        private void btnBrowseKey_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dlg = new OpenFileDialog();
+            dlg.Filter = "Private Key Files (*.pem)|*.pem|All files (*.*)|*.*";
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                txtKeyPath.Text = dlg.FileName;
+            }
+        }
 
 
         private void btnConnect_Click(object sender, EventArgs e)
@@ -32,14 +58,45 @@ namespace Movadian
                     return;
                 }
 
+                if (!File.Exists(certPath))
+                {
+                    txtLog.Text = " فایل گواهی وجود ندارد.";
+                    return;
+                }
+                if (!File.Exists(keyPath))
+                {
+                    txtLog.Text = " فایل کلید خصوصی وجود ندارد.";
+                    return;
+                }
+
                 apiManager.Initialize(memoryId, keyPath, certPath);
-                txtLog.Text = " اتصال با موفقیت برقرار شد.";
+
+                bool connectionOk = apiManager.TestConnection(memoryId);
+                if (connectionOk)
+                {
+                    txtLog.Text = " اتصال با سامانه برقرار شد (صورتحساب تستی ارسال شد)";
+                }
+                else
+                {
+                    txtLog.Text = " اتصال برقرار نشد! لطفاً فایل‌ها و اطلاعات را بررسی کنید.";
+                }
+
+
+                var settings = new UserSettings
+                {
+                    MemoryId = memoryId,
+                    CertificatePath = certPath,
+                    PrivateKeyPath = keyPath
+                };
+                SettingsManager.Save(settings);
             }
             catch (Exception ex)
             {
                 txtLog.Text = " خطا در اتصال:\r\n" + ex.Message;
             }
         }
+
+
         private void MainForm_Load(object sender, EventArgs e)
         {
 
@@ -147,6 +204,5 @@ namespace Movadian
                 txtLog.Text = " خطا در استعلام وضعیت:\r\n" + ex.Message;
             }
         }
-
     }
 }

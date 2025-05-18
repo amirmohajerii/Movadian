@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -59,6 +62,8 @@
             this.tsstam = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnSendInvoice = new System.Windows.Forms.Button();
             this.btnCheckStatus = new System.Windows.Forms.Button();
+            this.btnBrowseCert = new System.Windows.Forms.Button();
+            this.btnBrowseKey = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvItems)).BeginInit();
             this.SuspendLayout();
             // 
@@ -227,6 +232,14 @@
             // 
             // dgvItems
             // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvItems.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvItems.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.sstid,
@@ -236,8 +249,24 @@
             this.fee,
             this.vam,
             this.tsstam});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvItems.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvItems.Location = new System.Drawing.Point(358, 27);
             this.dgvItems.Name = "dgvItems";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvItems.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvItems.Size = new System.Drawing.Size(745, 258);
             this.dgvItems.TabIndex = 20;
             // 
@@ -296,11 +325,34 @@
             this.btnCheckStatus.UseVisualStyleBackColor = true;
             this.btnCheckStatus.Click += new System.EventHandler(this.btnCheckStatus_Click);
             // 
+            // btnBrowseCert
+            // 
+            this.btnBrowseCert.Location = new System.Drawing.Point(1289, 88);
+            this.btnBrowseCert.Name = "btnBrowseCert";
+            this.btnBrowseCert.Size = new System.Drawing.Size(75, 23);
+            this.btnBrowseCert.TabIndex = 23;
+            this.btnBrowseCert.Text = "انتخاب";
+            this.btnBrowseCert.UseVisualStyleBackColor = true;
+            this.btnBrowseCert.Click += new System.EventHandler(this.btnBrowseCert_Click);
+            // 
+            // btnBrowseKey
+            // 
+            this.btnBrowseKey.Location = new System.Drawing.Point(1289, 126);
+            this.btnBrowseKey.Name = "btnBrowseKey";
+            this.btnBrowseKey.Size = new System.Drawing.Size(75, 23);
+            this.btnBrowseKey.TabIndex = 24;
+            this.btnBrowseKey.Text = "انتخاب";
+            this.btnBrowseKey.UseVisualStyleBackColor = true;
+            this.btnBrowseKey.Click += new System.EventHandler(this.btnBrowseKey_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(1451, 790);
+            this.Controls.Add(this.btnBrowseKey);
+            this.Controls.Add(this.btnBrowseCert);
             this.Controls.Add(this.btnCheckStatus);
             this.Controls.Add(this.btnSendInvoice);
             this.Controls.Add(this.dgvItems);
@@ -326,7 +378,7 @@
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
-            this.Text = "MainForm";
+            this.Text = "سامانه مودیان";
             this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvItems)).EndInit();
             this.ResumeLayout(false);
@@ -366,6 +418,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn tsstam;
         private System.Windows.Forms.Button btnSendInvoice;
         private System.Windows.Forms.Button btnCheckStatus;
+        private System.Windows.Forms.Button btnBrowseCert;
+        private System.Windows.Forms.Button btnBrowseKey;
     }
 }
 
